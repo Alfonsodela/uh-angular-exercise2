@@ -1,0 +1,19 @@
+<div>app works</div>
+
+<div
+  *ngIf="createProductForm"
+  [formGroup]="createProductForm"
+  (submit)="saveProduct($event)"
+>
+  <input [placeholder="Name" formControlName="name" />
+  <input [placeholder="Price" formControlName="price" />
+  <input [placeholder="Image" formControlName="image" />
+  <input [placeholder="Color" formControlName="color" />
+  <textarea formControlName="description"></textarea>
+  <button 
+    type="submit" 
+    [disabled]="!createProductForm.valid">
+    Create</button>
+</div>
+
+
