@@ -1,19 +1,21 @@
-<div>app works</div>
-
-<div
+<form
   *ngIf="createProductForm"
   [formGroup]="createProductForm"
   (submit)="saveProduct($event)"
 >
-  <input [placeholder="Name" formControlName="name" />
-  <input [placeholder="Price" formControlName="price" />
-  <input [placeholder="Image" formControlName="image" />
-  <input [placeholder="Color" formControlName="color" />
+  <input placeholder="Name" formControlName="name" />
+  <input placeholder="Price" formControlName="price" />
+  <input placeholder="Image" formControlName="image" />
+  <input placeholder="Stars" formControlName="stars" />
   <textarea formControlName="description"></textarea>
-  <button 
-    type="submit" 
-    [disabled]="!createProductForm.valid">
-    Create</button>
-</div>
+  <button type="submit" [disabled]="!createProductForm.valid">Create</button>
+</form>
+
+<div class="products">
+    <app-create-form *ngFor="let product of savedProducts">
+    [products]="products"</app-create-form>
+  </div>
+
+
 
 

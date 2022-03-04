@@ -27,10 +27,8 @@ export class CreateFormComponent implements OnInit {
   public saveProduct(event: Event) {
     event.preventDefault();
     if (this.createProductForm?.valid) {
-      // let productRequest;
-      // if (this.product?.id) {
-        // productRequest = this
         console.log(this.createProductForm.value);
+        this.savedProducts.push(this.createProductForm.value);
       }
     }
     
