@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserInterface } from 'src/app/core/model/user.model';
 
 @Component({
   selector: 'app-users',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
+  public savedUsers: UserInterface[] = [];
 
   constructor() { }
 

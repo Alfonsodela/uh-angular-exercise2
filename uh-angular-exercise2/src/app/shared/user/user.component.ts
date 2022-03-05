@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from 'src/app/core/model/user.model';
+import { UserInterface} from 'src/app/core/model/user.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,10 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class UserComponent implements OnInit {
 
   public createUserForm?: FormGroup;
-  public savedUsers: User[] = [];
-  // public countries: Countries[] = [
-    // "France", "Germany", "Italy", "Portugal", "Spain", "United States", "United Kingdom"
-  // ];
+  public savedUsers: UserInterface[] = [];
 
   constructor() {}
 

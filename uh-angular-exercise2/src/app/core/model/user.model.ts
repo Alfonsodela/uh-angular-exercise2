@@ -1,7 +1,6 @@
-export interface User{
+export interface UserInterface{
     name: string;
     email: string;
     password: string
 }
 
-export type Countries = 'Germany' | 'United Kingdom' | 'Italy' | 'France' | 'Spain';
