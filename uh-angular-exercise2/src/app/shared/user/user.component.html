@@ -1,0 +1,18 @@
+<p>user works!</p>
+<form
+  *ngIf="createUserForm"
+  [formGroup]="createUserForm"
+  (submit)="saveUsers($event)"
+>
+  <input placeholder="Name" formControlName="name" />
+  <input placeholder="Email" formControlName="email" />
+  <input placeholder="Password" formControlName="password" />
+  <button type="submit" [disabled]="!createUserForm.valid">Create</button>
+</form>
+
+<div class="users"
+    *ngFor="let user of savedUsers">
+  <p>{{user.name}}</p>
+  <p>{{user.email}}</p>
+  <p>{{user.password}}</p>
+  </div>

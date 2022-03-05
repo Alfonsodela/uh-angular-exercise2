@@ -1,6 +1,4 @@
-input,
-textarea,
-select {
+input {
     display: block;
     flex: 35%;
     margin-bottom: 24px;
@@ -20,7 +18,7 @@ button {
     margin-right: 30px;
 }
 
-.products{
+.users{
     display: flex;
     flex-wrap: wrap;
 }
